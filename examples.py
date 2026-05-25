@@ -8,3 +8,5 @@ print("Hertl goal 8:21")
 print(poisson_predictor("COL", "VGK", 11.6, 3, 4))
 print("Howden Goal 19:01")
 print(poisson_predictor("COL", "VGK", 1, 3, 5))
+
+run_live()

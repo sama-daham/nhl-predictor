@@ -12,7 +12,39 @@ def _poisson_pmf(k, mu):
         return (mu**k) * math.exp(-mu) / math.factorial(k)
     except OverflowError:
         return 0.0
-    
+
+def get_todays_games():
+    data = requests.get("https://api-web.nhle.com/v1/schedule/now").json()
+    games = data["gameWeek"][0]["games"]
+    result = []
+    for game in games:
+        result.append({"id": game["id"],
+        "away": game["awayTeam"]["abbrev"], 
+        "home": game["homeTeam"]["abbrev"]})
+    return result    
+
+def games_today():
+    if get_todays_games() is not None:
+        return True
+    return False
+
+def pick_game():
+    if games_today():
+        games = get_todays_games()
+        print("Games today: ")
+        for i, game in enumerate(games):
+            print(str(i+1) + ". " + game["away"] + " @ " + game["home"])  
+        choice = input("Pick a game: ")
+        return games[int(choice)-1]["id"]
+    else:
+        return "No games today"
+
+def get_live_game_state(game_id):
+    data = requests.get(f"https://api-web.nhle.com/v1/gamecenter/{game_id}/landing").json()
+    if data["gameState"] == "LIVE":
+        return [data["awayTeam"]["abbrev"],data["homeTeam"]["abbrev"],data["timeRemaining"],data["awayTeam"]["score"],data["homeTeam"]["score"]]
+    raise ValueError("Game is not live")
+
 def get_standings(team): #use official abbreviation in all caps
     data = requests.get("https://api-web.nhle.com/v1/standings/now").json()
     for item in data["standings"]:
@@ -37,3 +69,13 @@ def poisson_predictor(team1, team2, time_remaining, score1, score2):
             if (score1+i) > (score2+j):
                 win_prob += (prob1*prob2)
     return win_prob
+
+def run_live():
+    game_id = pick_game()
+    try:
+        state = get_live_game_state(game_id)
+        result = poisson_predictor(*state)
+        print(f"{state[0]} win probability: {result:.1%}")
+        print(f"{state[1]} win probability: {1-result:.1%}")
+    except ValueError as e:
+        print(f"Game not available: {e}")
