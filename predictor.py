@@ -35,5 +35,7 @@ def poisson_predictor(team1, team2, time_remaining, score1, score2):
                 win_prob += (prob1*prob2)
     return win_prob
 
-
+#col-vgk game 3
+print(poisson_predictor("COL", "VGK", 20, 3, 3))
 print(poisson_predictor("COL", "VGK", 11.6, 3, 4))
+print(poisson_predictor("COL", "VGK", 1, 3, 5))
