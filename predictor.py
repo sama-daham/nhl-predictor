@@ -17,13 +17,16 @@ def get_standings(team): #use official abbreviation in all caps
     data = requests.get("https://api-web.nhle.com/v1/standings/now").json()
     for item in data["standings"]:
         if item["teamAbbrev"]["default"] == team:
-            return item["goalsForPctg"]
+            return (item["goalsForPctg"], float(item["goalAgainst"]/item["gamesPlayed"]))
     raise ValueError("Team not found")
 
 def poisson_predictor(team1, team2, time_remaining, score1, score2):
     #returns probability of team1 winning
-    rate1 = get_standings(team1)
-    rate2 = get_standings(team2)
+    team1_stats = get_standings(team1)
+    team2_stats = get_standings(team2)
+    #rateA = avg(teamA scoring, teamB scored on)
+    rate1 = (team1_stats[0] + team2_stats[1])/2
+    rate2 = (team2_stats[0] + team1_stats[1])/2 
     exp_goals1 = rate1/60*time_remaining
     exp_goals2 = rate2/60*time_remaining
     win_prob = 0.0
@@ -34,8 +37,3 @@ def poisson_predictor(team1, team2, time_remaining, score1, score2):
             if (score1+i) > (score2+j):
                 win_prob += (prob1*prob2)
     return win_prob
-
-#col-vgk game 3
-print(poisson_predictor("COL", "VGK", 20, 3, 3))
-print(poisson_predictor("COL", "VGK", 11.6, 3, 4))
-print(poisson_predictor("COL", "VGK", 1, 3, 5))
