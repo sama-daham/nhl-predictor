@@ -2,6 +2,7 @@ import math
 import urllib.request
 import json
 import requests
+import datetime
 
 # lightweight Poisson PMF in case scipy is not available
 def _poisson_pmf(k, mu):
@@ -42,7 +43,7 @@ def pick_game():
 def get_live_game_state(game_id):
     data = requests.get(f"https://api-web.nhle.com/v1/gamecenter/{game_id}/landing").json()
     result = []
-    if data["gameState"] == "LIVE":
+    if data["gameState"] == "LIVE" or data["gameState"] == "CRIT":
         time_adjustment = (3 - data["periodDescriptor"]["number"])*20
         result = [data["awayTeam"]["abbrev"],data["homeTeam"]["abbrev"],data["clock"]["secondsRemaining"]/60 + time_adjustment,data["awayTeam"]["score"],data["homeTeam"]["score"]]
         if data["clock"]["inIntermission"]:
@@ -80,6 +81,7 @@ def run_live():
     try:
         state = get_live_game_state(game_id)
         result = poisson_predictor(*state)
+        print(datetime.datetime.now())
         print(f"Time remaining: {state[2]}")
         print(f"{state[0]} win probability: {result:.1%}")
         print(f"{state[1]} win probability: {1-result:.1%}")

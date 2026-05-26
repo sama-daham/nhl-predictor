@@ -1,0 +1,607 @@
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Traceback (most recent call last):
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/examples.py", line 12, in <module>
+    run_live()
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/predictor.py", line 77, in run_live
+    result = poisson_predictor(*state)
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/predictor.py", line 62, in poisson_predictor
+    exp_goals1 = rate1/60*time_remaining
+TypeError: can't multiply sequence by non-int of type 'float'
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+COL @ VGK - West Final Game 3
+3rd period start
+0.3937984492160549
+Hertl goal 8:21
+0.08941850867521697
+Howden Goal 19:01
+2.691954136596159e-05
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+CAR win probability: 17.4%
+MTL win probability: 82.6%
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+COL @ VGK - West Final Game 3
+3rd period start
+0.3937984492160549
+Hertl goal 8:21
+0.08941850867521697
+Howden Goal 19:01
+2.691954136596159e-05
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 20.5
+CAR win probability: 37.1%
+MTL win probability: 62.9%
+Mac:nhl-predictor sama$ git add .
+Mac:nhl-predictor sama$ git commit -m "fix time remaining"
+[main 2f1f33c] fix time remaining
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Mac:nhl-predictor sama$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 474 bytes | 474.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sama-daham/nhl-predictor.git
+   55c1f41..2f1f33c  main -> main
+Mac:nhl-predictor sama$ python3 predictor.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+COL @ VGK - West Final Game 3
+3rd period start
+0.3937984492160549
+Hertl goal 8:21
+0.08941850867521697
+Howden Goal 19:01
+2.691954136596159e-05
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 30.78333333333333
+CAR win probability: 40.5%
+MTL win probability: 59.5%
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+COL @ VGK - West Final Game 3
+3rd period start
+0.3937984492160549
+Hertl goal 8:21
+0.08941850867521697
+Howden Goal 19:01
+2.691954136596159e-05
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 20
+CAR win probability: 36.9%
+MTL win probability: 63.1%
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 20
+CAR win probability: 36.9%
+MTL win probability: 63.1%
+Mac:nhl-predictor sama$ git add .
+Mac:nhl-predictor sama$ git commit -m "fix bug when inIntermission"
+[main d272aeb] fix bug when inIntermissionhomeGamesPlayed': 41, 'homeGoalDifferential': 2, 'homeGoalsAgainst': 143, 'homeGoalsFor': 145, 'homeLosses': 13, 'homeOtLosses': 4, 'homePoints': 52, 'homeRegulationPlusOtWins': 20, 'homeRegulationWins': 15, 'homeTies': 0, 'homeWins': 24, 'l10GamesPlayed': 10, 'l10GoalDifferential': -11, 'l10GoalsAgainst': 41, 'l10GoalsFor': 30, 'l10Losses': 6, 'l10OtLosses': 2, 'l10Points': 6, 'l10RegulationPlusOtWins': 2, 'l10RegulationWins': 2, 'l10Ties': 0, 'l10Wins': 2, 'leagueHomeSequence': 10, 'leagueL10Sequence': 27, 'leagueRoadSequence': 23, 'leagueSequence': 18, 'losses': 33, 'otLosses': 6, 'placeName': {'default': 'Anaheim'}, 'pointPctg': 0.560976, 'points': 92, 'regulationPlusOtWinPctg': 0.426829, 'regulationPlusOtWins': 35, 'regulationWinPctg': 0.317073, 'regulationWins': 26, 'roadGamesPlayed': 41, 'roadGoalDifferential': -17, 'roadGoalsAgainst': 145, 'roadGoalsFor': 128, 'roadLosses': 20, 'roadOtLosses': 2, 'roadPoints': 40, 'roadRegulationPlusOtWins': 15, 'roadRegulationWins': 11, 'roadTies': 0, 'roadWins': 19, 'seasonId': 20252026, 'shootoutLosses': 0, 'shootoutWins': 8, 'streakCode': 'W', 'streakCount': 1, 'teamName': {'default': 'Anaheim Ducks', 'fr': "Ducks d'Anaheim"}, 'teamCommonName': {'default': 'Ducks'}, 'teamAbbrev': {'default': 'ANA'}, 'teamLogo': 'https://assets.nhle.com/logos/nhl/svg/ANA_light.svg', 'ties': 0, 'waiversSequence': 15, 'wildcardSequence': 0, 'winPctg': 0.52439, 'wins': 43}, {'clinchIndicator': 'e', 'conferenceAbbrev': 'E', 'conferenceHomeSequence': 12, 'conferenceL10Sequence': 13, 'conferenceName': 'Eastern', 'conferenceRoadSequence': 9, 'conferenceSequence': 12, 'date': '2026-04-17', 'divisionAbbrev': 'M', 'divisionHomeSequence': 6, 'divisionL10Sequence': 7, 'divisionName': 'Metropolitan', 'divisionRoadSequence': 4, 'divisionSequence': 6, 'gameTypeId': 2, 'gamesPlayed': 82, 'goalDifferential': -8, 'goalDifferentialPctg': -0.097561, 'goalAgainst': 241, 'goalFor': 233, 'goalsForPctg': 2.841463, 'homeGamesPlayed': 41, 'homeGoalDifferential': -2, 'homeGoalsAgainst': 122, 'homeGoalsFor': 120, 'homeLosses': 17, 'homeOtLosses': 2, 'homePoints': 46, 'homeRegulationPlusOtWins': 19, 'homeRegulationWins': 17, 'homeTies': 0, 'homeWins': 22, 'l10GamesPlayed': 10, 'l10GoalDifferential': -11, 'l10GoalsAgainst': 35, 'l10GoalsFor': 24, 'l10Losses': 7, 'l10OtLosses': 0, 'l10Points': 6, 'l10RegulationPlusOtWins': 3, 'l10RegulationWins': 3, 'l10Ties': 0, 'l10Wins': 3, 'leagueHomeSequence': 22, 'leagueL10Sequence': 26, 'leagueRoadSequence': 15, 'leagueSequence': 19, 'losses': 34, 'otLosses': 5, 'placeName': {'default': 'NY Islanders'}, 'pointPctg': 0.554878, 'points': 91, 'regulationPlusOtWinPctg': 0.47561, 'regulationPlusOtWins': 39, 'regulationWinPctg': 0.353659, 'regulationWins': 29, 'roadGamesPlayed': 41, 'roadGoalDifferential': -6, 'roadGoalsAgainst': 119, 'roadGoalsFor': 113, 'roadLosses': 17, 'roadOtLosses': 3, 'roadPoints': 45, 'roadRegulationPlusOtWins': 20, 'roadRegulationWins': 12, 'roadTies': 0, 'roadWins': 21, 'seasonId': 20252026, 'shootoutLosses': 5, 'shootoutWins': 4, 'streakCode': 'L', 'streakCount': 3, 'teamName': {'default': 'New York Islanders', 'fr': 'Islanders de New York'}, 'teamCommonName': {'default': 'Islanders'}, 'teamAbbrev': {'default': 'NYI'}, 'teamLogo': 'https://assets.nhl
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 20.0
+CAR win probability: 36.9%
+MTL win probability: 63.1%
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 20.0
+CAR win probability: 36.9%
+MTL win probability: 63.1%
+Fanduel data: 
+CAR: 0.6
+MTL: 0.45871559633027525
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 19.6
+CAR win probability: 36.7%
+MTL win probability: 63.3%
+Fanduel data: 
+CAR: 0.6
+MTL: 0.45871559633027525
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 17.05
+CAR win probability: 35.3%
+MTL win probability: 64.7%
+Fanduel data: 
+CAR: 0.9367888748419722
+Traceback (most recent call last):
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/examples.py", line 18, in <module>
+    print("MTL: " + str(100/(mtl_fd+100)))
+NameError: name 'mtl_fd' is not defined
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 16.8
+CAR win probability: 35.1%
+MTL win probability: 64.9%
+Fanduel data: 
+CAR: 0.5867768595041323
+MTL: 0.45045045045045046
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Time remaining: 16.45
+CAR win probability: 34.9%
+MTL win probability: 65.1%
+Fanduel data: 
+CAR: 0.5867768595041323
+MTL: 0.45045045045045046
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:17:32.243952
+Time remaining: 13.883333333333333
+CAR win probability: 33.0%
+MTL win probability: 67.0%
+Fanduel data: 
+CAR: 0.5934959349593496
+MTL: 0.4672897196261682
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:19:23.678184
+Time remaining: 13.683333333333334
+CAR win probability: 32.8%
+MTL win probability: 67.2%
+Fanduel data: 
+CAR: 0.5934959349593496
+MTL: 0.4672897196261682
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:20:56.015642
+Time remaining: 12.966666666666667
+CAR win probability: 32.1%
+MTL win probability: 67.9%
+Fanduel data: 
+CAR: 0.5934959349593496
+MTL: 0.4672897196261682
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:21:24.236297
+Time remaining: 12.383333333333333
+CAR win probability: 31.6%
+MTL win probability: 68.4%
+Fanduel data: 
+CAR: 0.5867768595041323
+MTL: 0.4716981132075472
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:22:04.455560
+Time remaining: 12.133333333333333
+CAR win probability: 31.3%
+MTL win probability: 68.7%
+Fanduel data: 
+CAR: 0.6
+MTL: 0.45871559633027525
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:23:59.291272
+Time remaining: 11.533333333333333
+CAR win probability: 8.4%
+MTL win probability: 91.6%
+Fanduel data: 
+MTL: 0.8275862068965517
+CAR: 0.23255813953488372
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:26:10.668840
+Time remaining: 11.75
+CAR win probability: 30.9%
+MTL win probability: 69.1%
+Fanduel data: 
+CAR0.5934959349593496
+MTL: 0.4672897196261682
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:26:31.588918
+Time remaining: 11.483333333333333
+CAR win probability: 30.6%
+MTL win probability: 69.4%
+Fanduel data: 
+CAR: 0.5934959349593496
+MTL: 0.4672897196261682
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:27:25.570495
+Time remaining: 11.1
+CAR win probability: 30.2%
+MTL win probability: 69.8%
+Fanduel data: 
+CAR: 0.5833333333333334
+MTL: 0.47619047619047616
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:27:45.663007
+Time remaining: 10.95
+CAR win probability: 30.0%
+MTL win probability: 70.0%
+Fanduel data: 
+CAR: 0.6
+MTL: 0.45871559633027525
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:28:14.030015
+Time remaining: 10.45
+CAR win probability: 29.4%
+MTL win probability: 70.6%
+Fanduel data: 
+CAR: 0.5867768595041323
+MTL: 0.4716981132075472
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+1Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Traceback (most recent call last):
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/examples.py", line 14, in <module>
+    run_live()
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/predictor.py", line 80, in run_live
+    game_id = pick_game()
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/predictor.py", line 39, in pick_game
+    return games[int(choice)-1]["id"]
+IndexError: list index out of range
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:29:10.339011
+Time remaining: 9.65
+CAR win probability: 28.3%
+MTL win probability: 71.7%
+Fanduel data: 
+CAR: 0.6124031007751938
+MTL: 0.44642857142857145
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:31:03.073880
+Time remaining: 9.65
+CAR win probability: 28.3%
+MTL win probability: 71.7%
+Fanduel data: 
+CAR: 0.6183206106870229
+MTL: 0.4424778761061947
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:32:30.411548
+Time remaining: 8.916666666666666
+CAR win probability: 27.3%
+MTL win probability: 72.7%
+Fanduel data: 
+CAR: 0.6428571428571429
+MTL: 0.4166666666666667
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:33:12.874278
+Time remaining: 8.15
+CAR win probability: 26.0%
+MTL win probability: 74.0%
+Fanduel data: 
+CAR: 0.6428571428571429
+MTL: 0.4166666666666667
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:33:31.773588
+Time remaining: 7.9
+CAR win probability: 25.6%
+MTL win probability: 74.4%
+Fanduel data: 
+CAR: 0.6183206106870229
+MTL: 0.4424778761061947
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:34:25.821979
+Time remaining: 6.966666666666667
+CAR win probability: 23.9%
+MTL win probability: 76.1%
+Fanduel data: 
+CAR: 0.5967741935483871
+MTL: 0.46296296296296297
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:36:08.519584
+Time remaining: 5.783333333333333
+CAR win probability: 21.4%
+MTL win probability: 78.6%
+Fanduel data: 
+CAR: 0.6240601503759399
+MTL: 0.43478260869565216
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:37:51.051091
+Time remaining: 5.783333333333333
+CAR win probability: 21.4%
+MTL win probability: 78.6%
+Fanduel data: 
+CAR: 0.6240601503759399
+MTL: 0.43478260869565216
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Game not available: Game is not live
+Fanduel data: 
+CAR: 0.609375
+MTL: 0.45045045045045046
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Game not available: Game is not live
+Fanduel data: 
+CAR: 0.6153846153846154
+MTL: 0.44642857142857145
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Game not available: Game is not live
+Fanduel data: 
+CAR: 0.6124031007751938
+MTL: 0.44642857142857145
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Game not available: Game is not live
+Fanduel data: 
+CAR: 0.6124031007751938
+MTL: 0.44642857142857145
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:44:13.568349
+Time remaining: 1.6666666666666667
+CAR win probability: 8.2%
+MTL win probability: 91.8%
+Fanduel data: 
+CAR: 0.6153846153846154
+MTL: 0.44642857142857145
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:45:20.111539
+Time remaining: 1.3833333333333333
+CAR win probability: 7.0%
+MTL win probability: 93.0%
+Fanduel data: 
+CAR: 0.6212121212121212
+MTL: 0.43859649122807015
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:46:04.926726
+Time remaining: 0.9166666666666666
+CAR win probability: 4.8%
+MTL win probability: 95.2%
+Fanduel data: 
+CAR: 0.6296296296296297
+MTL: 0.43103448275862066
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:46:31.966608
+Time remaining: 0.9166666666666666
+CAR win probability: 4.8%
+MTL win probability: 95.2%
+Fanduel data: 
+CAR: 0.6124031007751938
+MTL: 0.44642857142857145
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+1Games today: 
+1. CAR @ MTL
+Pick a game: 1
+Traceback (most recent call last):
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/examples.py", line 14, in <module>
+    run_live()
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/predictor.py", line 80, in run_live
+    game_id = pick_game()
+  File "/Users/sama/Desktop/Projects/VS Code/nhl-predictor/predictor.py", line 39, in pick_game
+    return games[int(choice)-1]["id"]
+IndexError: list index out of range
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:47:10.508599
+Time remaining: 0.4
+CAR win probability: 2.2%
+MTL win probability: 97.8%
+Fanduel data: 
+CAR: 0.6124031007751938
+MTL: 0.44642857142857145
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:47:37.728765
+Time remaining: 0.4
+CAR win probability: 2.2%
+MTL win probability: 97.8%
+Fanduel data: 
+CAR: 0.6124031007751938
+MTL: 0.44642857142857145
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:48:09.585998
+Time remaining: 0
+CAR win probability: 0.0%
+MTL win probability: 100.0%
+Fanduel data: 
+CAR: 0.6183206106870229
+MTL: 0.4424778761061947
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:48:22.363698
+Time remaining: 0
+CAR win probability: 0.0%
+MTL win probability: 100.0%
+Fanduel data: 
+CAR: 0.6062992125984252
+MTL: 0.45454545454545453
+Mac:nhl-predictor sama$ python3 examples.py
+/Users/sama/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Games today: 
+1. CAR @ MTL
+Pick a game: 1
+2026-05-25 21:50:14.105123
+Time remaining: 0
+CAR win probability: 0.0%
+MTL win probability: 100.0%
+Fanduel data: 
+CAR: 0.6183206106870229
+MTL: 0.4424778761061947
