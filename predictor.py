@@ -45,6 +45,8 @@ def get_live_game_state(game_id):
     if data["gameState"] == "LIVE":
         time_adjustment = (3 - data["periodDescriptor"]["number"])*20
         result = [data["awayTeam"]["abbrev"],data["homeTeam"]["abbrev"],data["clock"]["secondsRemaining"]/60 + time_adjustment,data["awayTeam"]["score"],data["homeTeam"]["score"]]
+        if data["clock"]["inIntermission"]:
+            result[2] = time_adjustment
         return result
     raise ValueError("Game is not live")
 
