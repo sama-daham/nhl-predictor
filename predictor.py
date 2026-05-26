@@ -41,8 +41,11 @@ def pick_game():
 
 def get_live_game_state(game_id):
     data = requests.get(f"https://api-web.nhle.com/v1/gamecenter/{game_id}/landing").json()
+    result = []
     if data["gameState"] == "LIVE":
-        return [data["awayTeam"]["abbrev"],data["homeTeam"]["abbrev"],data["timeRemaining"],data["awayTeam"]["score"],data["homeTeam"]["score"]]
+        time_adjustment = (3 - data["periodDescriptor"]["number"])*20
+        result = [data["awayTeam"]["abbrev"],data["homeTeam"]["abbrev"],data["clock"]["secondsRemaining"]/60 + time_adjustment,data["awayTeam"]["score"],data["homeTeam"]["score"]]
+        return result
     raise ValueError("Game is not live")
 
 def get_standings(team): #use official abbreviation in all caps
@@ -75,6 +78,7 @@ def run_live():
     try:
         state = get_live_game_state(game_id)
         result = poisson_predictor(*state)
+        print(f"Time remaining: {state[2]}")
         print(f"{state[0]} win probability: {result:.1%}")
         print(f"{state[1]} win probability: {1-result:.1%}")
     except ValueError as e:
