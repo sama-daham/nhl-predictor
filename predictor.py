@@ -44,7 +44,7 @@ def get_live_game_state(game_id):
     data = requests.get(f"https://api-web.nhle.com/v1/gamecenter/{game_id}/landing").json()
     result = []
     if data["gameState"] == "LIVE" or data["gameState"] == "CRIT":
-        time_adjustment = (3 - data["periodDescriptor"]["number"])*20
+        time_adjustment = max(0, (3 - data["periodDescriptor"]["number"])*20)
         result = [data["awayTeam"]["abbrev"],data["homeTeam"]["abbrev"],data["clock"]["secondsRemaining"]/60 + time_adjustment,data["awayTeam"]["score"],data["homeTeam"]["score"]]
         if data["clock"]["inIntermission"]:
             result[2] = time_adjustment
@@ -67,14 +67,17 @@ def poisson_predictor(team1, team2, time_remaining, score1, score2):
     rate2 = (team2_stats[0] + team1_stats[1])/2 
     exp_goals1 = rate1/60*time_remaining
     exp_goals2 = rate2/60*time_remaining
-    win_prob = 0.0
+    win_prob1 = 0.0
+    win_prob2 = 0.0
     for i in range(15): #highest nhl score ever was 12
         for j in range(15):
             prob1 = _poisson_pmf(i, exp_goals1)
             prob2 = _poisson_pmf(j, exp_goals2)
             if (score1+i) > (score2+j):
-                win_prob += (prob1*prob2)
-    return win_prob
+                win_prob1 += (prob1*prob2)
+            if (score2+j)>(score1+i):
+                win_prob2 +=(prob1*prob2)
+    return (win_prob1, win_prob2)
 
 def run_live():
     game_id = pick_game()
@@ -83,7 +86,7 @@ def run_live():
         result = poisson_predictor(*state)
         print(datetime.datetime.now())
         print(f"Time remaining: {state[2]}")
-        print(f"{state[0]} win probability: {result:.1%}")
-        print(f"{state[1]} win probability: {1-result:.1%}")
+        print(f"{state[0]} win probability: {result[0]:.1%}")
+        print(f"{state[1]} win probability: {result[1]:.1%}")
     except ValueError as e:
         print(f"Game not available: {e}")
