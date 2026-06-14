@@ -3,6 +3,12 @@ import urllib.request
 import json
 import requests
 import datetime
+from config import ODDS_API_KEY
+
+TEAM_NAMES = {
+    "CAR": "Carolina Hurricanes",
+    "VGK": "Vegas Golden Knights"
+}
 
 # lightweight Poisson PMF in case scipy is not available
 def _poisson_pmf(k, mu):
@@ -59,7 +65,7 @@ def get_standings(team): #use official abbreviation in all caps
     raise ValueError("Team not found")
 
 def poisson_predictor(team1, team2, time_remaining, score1, score2):
-    #returns probability of team1 winning
+    #returns tuple of win probablility for team1, team2. team1 away
     team1_stats = get_standings(team1)
     team2_stats = get_standings(team2)
     #rateA = avg(teamA scoring, teamB scored on)
@@ -90,3 +96,22 @@ def run_live():
         print(f"{state[1]} win probability: {result[1]:.1%}")
     except ValueError as e:
         print(f"Game not available: {e}")
+
+
+def get_odds(team1, team2):
+    #returns tuple (away, home)
+    data = requests.get(
+        f"https://api.the-odds-api.com/v4/sports/icehockey_nhl/odds/",
+        params={
+            "apiKey": ODDS_API_KEY,
+            "regions": "us",
+            "markets": "h2h"
+        }
+    ).json()
+    for game in data:
+        if game["away_team"] == TEAM_NAMES[team1] and game["home_team"] == TEAM_NAMES[team2]:
+            for bookmaker in game["bookmakers"]:
+                if bookmaker["key"] == "fanduel":
+                    return (1/bookmaker["markets"][0]["outcomes"][0]["price"],1/bookmaker["markets"][0]["outcomes"][1]["price"])
+    raise ValueError("Game not found")
+

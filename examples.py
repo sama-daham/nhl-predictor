@@ -21,3 +21,10 @@ mtl_fd = 126
 print("CAR: " + str((car_fd)/(car_fd+100)))
 print("MTL: " + str(100/(mtl_fd+100)))
 '''
+
+#car @ vgk scf game 6 6/14/26
+run_live()
+odds = get_odds("CAR", "VGK")
+print("Fanduel data: " )
+print("CAR: " + str(odds[0]))
+print("VGK: " + str(odds[1]))
