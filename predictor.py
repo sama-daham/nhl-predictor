@@ -85,8 +85,9 @@ def poisson_predictor(team1, team2, time_remaining, score1, score2):
                 win_prob2 +=(prob1*prob2)
     return (win_prob1, win_prob2)
 
-def run_live():
-    game_id = pick_game()
+def run_live(game_id = None):
+    if game_id is None:
+        game_id = pick_game()
     try:
         state = get_live_game_state(game_id)
         result = poisson_predictor(*state)

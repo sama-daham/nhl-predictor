@@ -1,4 +1,5 @@
 from predictor import *
+import time
 
 '''
 #col-vgk game 3 5/24/26
@@ -23,8 +24,11 @@ print("MTL: " + str(100/(mtl_fd+100)))
 '''
 
 #car @ vgk scf game 6 6/14/26
-run_live()
-odds = get_odds("CAR", "VGK")
-print("Fanduel data: " )
-print("CAR: " + str(odds[0]))
-print("VGK: " + str(odds[1]))
+game_id = pick_game()
+while True:
+    run_live(game_id)
+    odds = get_odds("CAR", "VGK")
+    print("Fanduel data: " )
+    print("CAR: " + str(odds[0]))
+    print("VGK: " + str(odds[1]))
+    time.sleep(180)
